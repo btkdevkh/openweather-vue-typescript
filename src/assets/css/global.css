@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  background: rgb(2,0,36);
+  background: linear-gradient(
+    90deg, 
+    rgba(2,0,36,1) 0%, 
+    rgba(9,9,121,1) 35%, 
+    rgba(0,212,255,1) 100%
+  );
+}
+ul {
+  list-style-type: none;
+}
+a {
+  font-size: 1.5rem;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Header */
+header {
+  height: 200px;
+  padding: 15px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/weather.png");
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+header nav ul li {
+  margin: 0 10px;
+}
+
+/* Home screen */
+main {
+  margin: 0 10px;
+  text-align: center;
+}
+main form {
+  position: relative;
+}
+main form input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 3px;
+  background-color: #ddd;
+}
+main form input:focus {
+  outline: 0;
+}
+main form button {
+  width: 100%;
+  margin-top: 5px;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  border-radius: 3px;
+  background: rgb(2,0,36);
+  background: linear-gradient(
+    90deg, 
+    rgba(2,0,36,1) 0%, 
+    rgba(9,9,121,1) 0%, 
+    rgba(0,212,255,1) 100%
+  );
+}
+.error {
+  margin-top: 5px;
+  padding: 10px;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #df4759;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+/* Meteo screen */
+.meteoInfo {
+  font-size: 1.2rem;
+  padding-top: 15px;
+  text-align: center;
+  margin: 10px;
+}
+
+/* Responsive */
+@media screen and (min-width: 450px) {
+  .error,
+  main form input,
+  main form button {
+    width: 320px;
+    margin: auto;
+  }
+  .error,
+  main form button {
+    margin-top: 5px;
+  }
+}
+
+.pop-enter-from { opacity: 0; transform: scale(0.6); }
+.pop-enter-to { opacity: 1; transform: scale(1); }
+.pop-enter-active { transition: all 0.4s ease; }
+
+.pop-leave-from { opacity: 1; transform: scale(1); }
+.pop-leave-to { opacity: 0; transform: scale(0.6); }
+.pop-leave-active { transition: all 0.4s ease; position: absolute; }
+
+.pop-move {
+  transition: all 0.3 ease;
+}
+
+.switch-enter-from,
+  .switch-leave-to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .switch-enter-to,
+  .switch-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .switch-enter-active,
+  .switch-leave-active {
+    transition: all 0.5s ease;
+  }
