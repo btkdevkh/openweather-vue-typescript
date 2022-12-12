@@ -1,8 +1,8 @@
-# meteo-mini-app-vue
+# Vue App Mini Weather Forecast
 
 - You need an API Key to make this project work
 - Go to this website to get your api key by signing up: (https://openweathermap.org/)
-- when done, copy and paste your api key in a constant `api_key="your_api_key"` of a file in `getCity.ts` in the `composables` folder
+- When done, create an `.env.local` file in your project root directory and declare an env variable call `VUE_APP_OPENWEATHER_API_KEY="your api key"`.
 
 ## Project setup
 ```

@@ -2,10 +2,10 @@ import { ref } from 'vue';
 
 const getCity = () => {
   const error = ref<string>("");
+
   const load = async (city: string) => {
     try {
-      const api_key = "your_api_key";
-      const api_url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&units=metric&lang=fr`;
+      const api_url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.VUE_APP_OPENWEATHER_API_KEY}&units=metric&lang=fr`;
   
       const datas = await fetch(api_url);            
   
