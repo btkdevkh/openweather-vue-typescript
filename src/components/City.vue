@@ -7,6 +7,11 @@
         alt="weather image"
       >
       <img 
+        v-if="weather.description === 'ciel dégagé'" 
+        src="../assets/img/cloudy.png" 
+        alt="weather image"
+      >
+      <img 
         v-if="weather.description === 'peu nuageux'" 
         src="../assets/img/sunny.png" 
         alt="weather image"
